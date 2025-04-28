@@ -1,0 +1,17 @@
+Reflective Section
+
+1. *How your script handles arguments and options:*
+   - The script accepts several options (-n and -v) to control the behavior of the search. 
+   - It uses getopts to parse options and ensure the user can specify whether to show line numbers or invert the match.
+   - The script handles missing arguments (like the search string or filename) by printing an error message and terminating.
+   - If invalid options are provided, it provides helpful feedback on how to use the script.
+
+2. *How the structure would change if supporting regex, -i/-c/-l options:*
+   - To support *regex*, the script would need to adjust its search logic to use regex patterns with tools like grep -E or grep -P.
+   - For the *-i* (case-insensitive) option, you would add a flag to the grep command to enable case-insensitive matching.
+   - The *-c* (count matches) option could modify the script to count and output the number of matching lines.
+   - The *-l* (list filenames) option could adjust the script to print only the filenames of files containing a match rather than the matching lines.
+
+3. *What part of the script was hardest to implement and why:*
+   - The most challenging part was handling the correct parsing of multiple options (e.g., -v and -n together) and ensuring the script correctly interpreted the arguments and file paths.
+   - It was important to ensure the script could handle invalid inputs gracefully, providing helpful error messages for missing arguments or incorrect options.
