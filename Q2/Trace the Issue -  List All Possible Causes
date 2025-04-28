@@ -1,0 +1,11 @@
+- DNS Server not working: The DNS server responsible for resolving internal.example.com might be down or misconfigured.
+
+- Missing DNS record: There might not be a DNS record for internal.example.com, so DNS can't resolve the domain name.
+
+- Incorrect /etc/resolv.conf configuration: The system might be using the wrong DNS server or a misconfigured DNS resolver.
+
+- Firewall blocking the connection: A firewall could be blocking the DNS queries or the web service itself (ports 80/443).
+
+- Server IP address changed: The IP address of the server hosting the service may have changed, and the DNS server hasn’t been updated yet.
+
+- Routing or Network Isolation: There may be network issues, such as routing problems or network isolation, preventing the client from reaching the server
